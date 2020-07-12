@@ -22,96 +22,111 @@
 
 #include "push_swap.h"
 
-int		search_median(t_stk *stk)
+int search_median(t_stk *stk)
 {
-	int		median;
+	int median;
 
 	median = stk->min + (stk->max - stk->min) / 2;
-	sort_stack(stk, median);
+	sort_median(stk, median);
 	return (median);
 }
 
-//void	sort_median(int *a, int *b, t_stk *stk, int m)
-void	sort_median(t_stk *stk, int m)
+void sort_median(t_stk *stk, int m)
 {
-//	int		i;
-//	int		j;
-	int		index;
-
-//	i = 0;
-//	j = 0;
-	index = -1;
-	while (++index < stk->cnt_a)
-//	{
-		if (stk->a[index] >= m)
-			s_push(stk, 'b');
-//			a[i++] = stk->a[index];
-//		else
-
-//		{
-//			write(1, "pb ", 3);
-//			b[j++] = stk->a[index];
-//		}
-//	}
-//	free(stk->a);
-//	free(stk->b);
-//	stk->a = a;
-//	stk->cnt_a = i;
-//	stk->b = b;
-//	stk->cnt_b = j;
+//	int		index;
+//
+//	index = -1;
+	while (!sort_stack(stk, m))
+		continue;
+//		if (stk->a[index] >= m)
+//        {
+//            s_push(stk, 'b');
+//            index--;
+//        }
+//    if (stk->a[0] > m)
+//        s_push(stk, 'b');
+//    if (stk->a[0] < stk->a[1] && stk->a[1] > m)
+//    {
+//        s_swap(stk, 'a');
+//        s_push(stk, 'b');
+//    }
 }
 
-int 	check_rotate(t_stk *stk)
+int check_rotate_rev(t_stk *stk)
 {
 	char cmd;
 
 	cmd = 0;
+	if (stk->cnt_a > 1 && stk->a[0] > stk->a[1])
+		cmd = 'a';
+	if (stk->cnt_a > 1 && stk->b[0] < stk->b[1])
+		cmd = cmd == 'a' ? 's' : 'b';
+	s_rotate_rev(stk, cmd);
 	return (cmd != 0);
 }
 
-int 	check_swap(t_stk *stk)
+int check_rotate(t_stk *stk)
+{
+	char cmd;
+
+	cmd = 0;
+	if (stk->cnt_a > 1 && stk->a[0] > stk->a[1])
+		cmd = 'a';
+	if (stk->cnt_a > 1 && stk->b[0] < stk->b[1])
+		cmd = cmd == 'a' ? 's' : 'b';
+	s_rotate(stk, cmd);
+	return (cmd != 0);
+}
+
+int check_swap(t_stk *stk)
 {
 	char cmd;
 
 	cmd = 0;
 	if (stk->cnt_a > 1 && stk->a[0] > stk->b[1])
 		cmd = 'a';
-	if (stk->cnt_a > 1 && stk->a[0] > stk->b[1])
+	if (stk->cnt_a > 1 && stk->a[0] < stk->b[1])
 		cmd = cmd == 'a' ? 's' : 'b';
-	s_swap(stk ,cmd);
+	s_swap(stk, cmd);
 	return (cmd == 0);
 }
 
-void	search_cmd(t_stk *stk)
+void search_cmd(t_stk *stk)
 {
 	check_swap(stk);
 	check_rotate(stk);
 }
 
-int		check_sort(t_stk *stk)
+int check_sort(t_stk *stk)
 {
-	int i;
-
-	i = -1;
-//	while (++i < stk->cnt_a)
-//	{
-//		if (stk->a[i] > stk->a[i + 1])
-//			return (0);
 	search_cmd(stk);
-//	}
-//	return (stk->cnt_b == 0);
 	return (1);
 }
-void	sort_stack(t_stk *stk, int median) {
-//	int		*a;
-//	int		*b;
-//	int 	len;
 
-//	len = stk->cnt_a;
-//	a = ft_memalloc(sizeof(int) * len);
-//	b = ft_memalloc(sizeof(int) * len);
-//	sort_median(a, b, stk, median);
-	sort_median(stk, median);
-//	while (!check_sort(stk))
-//		continue;
+int sort_stack(t_stk *stk, int m)
+{
+	int i;
+	int pos;
+	int count[2];
+
+	count[0] = 0;
+	count[1] = 0;
+	i = -1;
+	pos = -1;
+	while (++i < stk->cnt_a)
+		if (stk->a[i] >= m)
+		{
+			pos = i;
+			count[i > stk->cnt_a / 2]++;
+		}
+	if (pos == -1)
+		return (1);
+	i = stk->cnt_a - pos;
+	while (--i >= 0)
+		if (count[0] > count[1])
+			s_rotate_rev(stk, 'a');
+		else
+			s_rotate(stk, 'a');
+	s_push(stk, 'b');
+	return (0);
 }
