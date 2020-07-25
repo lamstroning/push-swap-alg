@@ -117,7 +117,7 @@ int sort_stack(t_stk *stk, int m)
 		if (stk->a[i] >= m)
 		{
 			pos = i;
-			count[i > stk->cnt_a / 2]++;
+			count[i >= stk->cnt_a / 2]++;
 		}
 	if (pos == -1)
 		return (1);

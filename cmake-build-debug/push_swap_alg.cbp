@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="push_swap_alg"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/lenus/Desktop/push-swap-alg/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/lenus/Desktop/push-swap-alg/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/lenus/Desktop/push-swap-alg/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="push_swap_alg">
+				<Option output="/home/lenus/Desktop/push-swap-alg/cmake-build-debug/push_swap_alg" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lenus/Desktop/push-swap-alg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lenus/Desktop/push-swap-alg/ft_printf"/>
+					<Add directory="/home/lenus/Desktop/push-swap-alg/inc"/>
+					<Add directory="/home/lenus/Desktop/push-swap-alg/libft"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap_alg"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="push_swap_alg/fast">
+				<Option output="/home/lenus/Desktop/push-swap-alg/cmake-build-debug/push_swap_alg" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lenus/Desktop/push-swap-alg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/lenus/Desktop/push-swap-alg/ft_printf"/>
+					<Add directory="/home/lenus/Desktop/push-swap-alg/inc"/>
+					<Add directory="/home/lenus/Desktop/push-swap-alg/libft"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap_alg/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lenus/Desktop/push-swap-alg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/ft_printf/check_format.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/ft_printf/ft_printf.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/ft_printf/ft_printf.h">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/ft_printf/output.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/ft_printf/read_arg.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/ft_printf/read_flags.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/ft_printf/save_conf.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/inc/push_swap.h">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_addchr_e.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_addchr_s.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_addnchr_e.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_addnchr_s.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_atoi.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_bzero.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_chr_rep.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_chrstr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_comb.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_expn.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_float_itoa.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_hex.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_isalnum.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_isalpha.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_isascii.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_isdigit.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_isprint.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_isspace.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_itoa.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_latoi.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_lowstr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_lstadd.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_lstappend.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_lstdel.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_lstdelone.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_lstiter.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_lstlen.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_lstmap.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_lstnew.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_makemtrx.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_memalloc.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_memccpy.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_memchr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_memcmp.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_memcpy.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_memdel.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_memmove.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_memset.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_octal.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_pow.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_putchar.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_putchar_fd.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_putendl.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_putendl_fd.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_putnbr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_putnbr_fd.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_putstr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_putstr_fd.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_rewrite.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_sqrt.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strcat.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strchr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strclr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strcmp.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strcpy.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strcpy_chr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strdel.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strdup.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strequ.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_striter.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_striteri.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strjoin.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strlcat.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strlen.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strmap.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strmapi.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strncat.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strncmp.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strncpy.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strnequ.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strnew.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strnstr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strojoin.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strrchr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strsplit.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strstr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strsub.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_strtrim.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_swap.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_to_char.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_tolower.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_toupper.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_unitoa.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/ft_upstr.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/get_next_line.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/libft/libft.h">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/src/command.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/src/flags.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/src/main.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/src/search_median.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/src/utils.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/src/validation.c">
+			<Option target="push_swap_alg"/>
+		</Unit>
+		<Unit filename="/home/lenus/Desktop/push-swap-alg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(push C)
+project(push_swap_alg C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -7,7 +7,7 @@ include_directories(ft_printf)
 include_directories(inc)
 include_directories(libft)
 
-add_executable(push
+add_executable(push_swap_alg
         ft_printf/check_format.c
         ft_printf/ft_printf.c
         ft_printf/ft_printf.h
