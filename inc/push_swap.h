@@ -47,6 +47,7 @@ int					check_rotate(t_stk *stk);
 int					check_swap(t_stk *stk);
 void				search_cmd(t_stk *stk);
 int					check_sort(t_stk *stk);
+int					check_array(const int *a, int len, int direct);
 void				s_rotate(t_stk *stk, char c);
 void				s_rotate_rev(t_stk *stk, char c);
 void				push_down(int **stk, int max);
