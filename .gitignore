@@ -2,3 +2,6 @@
 /libft/obj/
 /ft_printf/obj/
 .idea
+/cmake-build-debug/
+/push_swap
+/src/.idea/
