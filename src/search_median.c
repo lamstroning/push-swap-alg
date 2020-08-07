@@ -91,16 +91,54 @@ int check_swap(t_stk *stk)
 	return (cmd == 0);
 }
 
-void search_cmd(t_stk *stk)
+void	search_cmd(t_stk *stk)
 {
 	check_swap(stk);
 	check_rotate(stk);
 }
 
-int check_sort(t_stk *stk)
+int		check_array(const int *arr, int len,  int direct)
 {
-	search_cmd(stk);
+	int		i;
+
+	i = -1;
+	while (++i < len - 1)
+		if (arr[i] * direct > arr[i + 1] * direct)
+			return (0);
 	return (1);
+}
+
+void	rotate_sort(t_stk *stk)
+{
+	//эта функции находится в тестовом режиме, ее следует переписать на универсальность для обоих стеков
+	int		len;
+	char	cur_c;
+	char	any_c;
+
+	// тернарники между стеком a и b
+	cur_c = 'a';
+	any_c = 'b';
+	len = stk->cnt_a;
+	while (len--)
+		s_push(stk, any_c);
+	len = stk->cnt_b;
+	while (len-- > 1) {
+		s_rotate_rev(stk, 'b');
+		s_push(stk, 'a');
+	}
+	s_push(stk, 'a');
+}
+
+int		check_sort(t_stk *stk)
+{
+	if (stk->cnt_b != 0)
+		return (0);
+	if (check_array(stk->a, stk->cnt_a, -1))
+		rotate_sort(stk);
+	//		ft_printf("put here callback sort alg");
+	if (check_array(stk->a, stk->cnt_a, 1))
+		return (1);
+	return (0);
 }
 
 int sort_stack(t_stk *stk, int m)
@@ -109,6 +147,8 @@ int sort_stack(t_stk *stk, int m)
 	int pos;
 	int count[2];
 
+	if (check_sort(stk))
+		return (1);
 	count[0] = 0;
 	count[1] = 0;
 	i = -1;
@@ -117,13 +157,13 @@ int sort_stack(t_stk *stk, int m)
 		if (stk->a[i] >= m)
 		{
 			pos = i;
-			count[i >= stk->cnt_a / 2]++;
+			count[i > stk->cnt_a / 2 - 1]++;
 		}
 	if (pos == -1)
 		return (1);
 	i = stk->cnt_a - pos;
-	while (--i >= 0)
-		if (count[0] > count[1])
+	while (--i >= 0 && pos != 0)
+		if (count[0] < count[1])
 			s_rotate_rev(stk, 'a');
 		else
 			s_rotate(stk, 'a');
