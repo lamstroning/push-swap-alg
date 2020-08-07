@@ -91,6 +91,7 @@ void	check_repeat(t_stk *stk)
 
 void	error(char *msg)
 {
-	ft_printf("%s\n", msg);
+	ft_putstr_fd(msg, 2);
+	ft_putchar('\n');
 	exit(1);
 }
