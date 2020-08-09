@@ -37,7 +37,9 @@ void sort_median(t_stk *stk, int m)
 //
 //	index = -1;
 	while (!sort_stack(stk, m))
-		continue;
+		continue ;
+	while (!check_sort(stk))
+		search_cmd(stk);
 //		if (stk->a[index] >= m)
 //        {
 //            s_push(stk, 'b');
@@ -57,9 +59,9 @@ int check_rotate_rev(t_stk *stk)
 	char cmd;
 
 	cmd = 0;
-	if (stk->cnt_a > 1 && stk->a[0] > stk->a[1])
+	if (stk->cnt_a > 1 && stk->a[0] < stk->a[1])
 		cmd = 'a';
-	if (stk->cnt_a > 1 && stk->b[0] < stk->b[1])
+	if (stk->cnt_b > 1 && stk->b[0] > stk->b[1])
 		cmd = cmd == 'a' ? 's' : 'b';
 	s_rotate_rev(stk, cmd);
 	return (cmd != 0);
@@ -70,9 +72,9 @@ int check_rotate(t_stk *stk)
 	char cmd;
 
 	cmd = 0;
-	if (stk->cnt_a > 1 && stk->a[0] > stk->a[1])
+	if (stk->cnt_a > 1 && stk->a[0] < stk->a[1])
 		cmd = 'a';
-	if (stk->cnt_a > 1 && stk->b[0] < stk->b[1])
+	if (stk->cnt_b > 1 && stk->b[0] > stk->b[1])
 		cmd = cmd == 'a' ? 's' : 'b';
 	s_rotate(stk, cmd);
 	return (cmd != 0);
@@ -83,18 +85,30 @@ int check_swap(t_stk *stk)
 	char cmd;
 
 	cmd = 0;
-	if (stk->cnt_a > 1 && stk->a[0] > stk->b[1])
+	if (stk->cnt_a > 1 && stk->a[0] < stk->a[1])
 		cmd = 'a';
-	if (stk->cnt_a > 1 && stk->a[0] < stk->b[1])
+	if (stk->cnt_b > 1 && stk->b[0] > stk->b[1])
 		cmd = cmd == 'a' ? 's' : 'b';
 	s_swap(stk, cmd);
 	return (cmd == 0);
 }
 
+void	push_all(t_stk *stk, char col)
+{
+	int		len;
+
+	len = col == 'a' ? stk->cnt_a : stk->cnt_b;
+	while (len-- >= 0)
+		s_push(stk, col);
+}
+
 void	search_cmd(t_stk *stk)
 {
+	if (!stk->cnt_a)
+		return ;
 	check_swap(stk);
-	check_rotate(stk);
+	push_all(stk, 'a');
+//	check_rotate(stk);
 }
 
 int		check_array(const int *arr, int len,  int direct)
@@ -129,6 +143,14 @@ void	rotate_sort(t_stk *stk)
 	s_push(stk, 'a');
 }
 
+void		first_sort(t_stk *stk, int m)
+{
+	if (!stk->cnt_a)
+		return ;
+	while (stk->a[0] > m)
+		s_push(stk, 'b');
+}
+
 int		check_sort(t_stk *stk)
 {
 	if (stk->cnt_b != 0)
@@ -153,6 +175,7 @@ int sort_stack(t_stk *stk, int m)
 	count[1] = 0;
 	i = -1;
 	pos = -1;
+	first_sort(stk, m);
 	while (++i < stk->cnt_a)
 		if (stk->a[i] >= m)
 		{
