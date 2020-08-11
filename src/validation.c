@@ -62,7 +62,7 @@ int		skip_flags(char **args)
 
 void	check_repeat(t_stk *stk)
 {
-
+	return ;
 }
 //void	check_repeat(t_stk *stk)
 //{
