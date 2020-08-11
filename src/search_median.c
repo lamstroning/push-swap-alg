@@ -108,6 +108,7 @@ void	search_cmd(t_stk *stk)
 		return ;
 	check_swap(stk);
 	push_all(stk, 'a');
+	check_sort(stk);
 //	check_rotate(stk);
 }
 
