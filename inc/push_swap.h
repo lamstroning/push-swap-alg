@@ -33,7 +33,8 @@ typedef struct		s_stk
 void				error(char *msg);
 int					check_validate(char **args, int len, int **a);
 void				check_repeat(const char **args);
-void				cmp_args(char *cmp, char **args);
+void				cmp_args(const char *cmp, const char **args);
+void				check_number(const char *str);
 char				**parse_string(const char **argv, int len, int *stk_size);
 int					skip_flags(char **args);
 int					help_flag(void);

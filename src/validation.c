@@ -67,12 +67,24 @@ void check_repeat(const char **args)
 	i = 0;
 	while (args[i + 1])
 	{
+		check_number(args[i]);
+		check_number(args[i + 1]);
 		cmp_args(args[i], &args[i + 1]);
 		i++;
 	}
 }
 
-void cmp_args(char *cmp, char **args)
+void check_number(const char *str)
+{
+	char	*tmp;
+
+	tmp = ft_itoa(ft_atoi(str));
+	if (!tmp || ft_strcmp(tmp, str))
+		error("I'ts not are number!");
+	ft_strdel(&tmp);
+}
+
+void	cmp_args(const char *cmp, const char **args)
 {
 	int i;
 
@@ -80,12 +92,8 @@ void cmp_args(char *cmp, char **args)
 	if (!args || !cmp)
 		return;
 	while (args[++i])
-	{
 		if (!ft_strcmp(args[i], cmp))
 			error("repeat numbers!");
-		if (ft_atoi(args[i]) != ft_atoi(cmp))
-			error("It's not a number!");
-	}
 }
 
 //void	check_repeat(t_stk *stk)
