@@ -1,10 +1,10 @@
 #include "push_swap.h"
 
-int		check_validate(char **args, int len, int **a)
+int check_validate(char **args, int len, int **a)
 {
-	int		i;
-	int		size;
-	int		count_elements;
+	int i;
+	int size;
+	int count_elements;
 
 	i = skip_flags(args);
 	count_elements = len + (i + 1) * -1;
@@ -24,17 +24,17 @@ int		check_validate(char **args, int len, int **a)
 	return (size);
 }
 
-char	**parse_string(const char **argv, int len, int *stk_size)
+char **parse_string(const char **argv, int len, int *stk_size)
 {
-	char	***tmp;
-	int		i;
-	int		j;
-	int		size;
+	char ***tmp;
+	int i;
+	int j;
+	int size;
 
 	j = -1;
 	i = -1;
 	size = -1;
-	tmp = (char***)ft_memalloc(sizeof(char **) * len);
+	tmp = (char ***) ft_memalloc(sizeof(char **) * len);
 	while (++i < len)
 	{
 		tmp[i] = ft_strsplit(argv[i], ' ');
@@ -46,9 +46,9 @@ char	**parse_string(const char **argv, int len, int *stk_size)
 	return (merge_stack(&tmp, size));
 }
 
-int		skip_flags(char **args)
+int skip_flags(char **args)
 {
-	int		count_flags;
+	int count_flags;
 
 	if (ft_strequ(args[0], "-h") || ft_strequ(args[0], "-help"))
 		help_flag();
@@ -60,10 +60,34 @@ int		skip_flags(char **args)
 	return (count_flags);
 }
 
-void	check_repeat(t_stk *stk)
+void check_repeat(const char **args)
 {
-	return ;
+	int i;
+
+	i = 0;
+	while (args[i + 1])
+	{
+		cmp_args(args[i], &args[i + 1]);
+		i++;
+	}
 }
+
+void cmp_args(char *cmp, char **args)
+{
+	int i;
+
+	i = -1;
+	if (!args || !cmp)
+		return;
+	while (args[++i])
+	{
+		if (!ft_strcmp(args[i], cmp))
+			error("repeat numbers!");
+		if (ft_atoi(args[i]) != ft_atoi(cmp))
+			error("It's not a number!");
+	}
+}
+
 //void	check_repeat(t_stk *stk)
 //{
 //	int		len;
@@ -93,7 +117,7 @@ void	check_repeat(t_stk *stk)
 //	free(repeat);
 //}
 
-void	error(char *msg)
+void error(char *msg)
 {
 	ft_putstr_fd(msg, 2);
 	ft_putchar('\n');
