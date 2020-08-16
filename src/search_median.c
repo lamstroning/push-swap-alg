@@ -109,6 +109,7 @@ void	search_cmd(t_stk *stk)
 	check_swap(stk);
 	push_all(stk, 'a');
 	check_sort(stk);
+	print_stack(stk);
 //	check_rotate(stk);
 }
 
@@ -170,6 +171,8 @@ int sort_stack(t_stk *stk, int m)
 	int pos;
 	int count[2];
 
+	print_stack(stk);
+
 	if (check_sort(stk))
 		return (1);
 	count[0] = 0;
@@ -185,12 +188,31 @@ int sort_stack(t_stk *stk, int m)
 		}
 	if (pos == -1)
 		return (1);
-	i = stk->cnt_a - pos;
+	if (count[0] > count[1])
+		i = pos;
+	else
+		i = stk->cnt_a - pos;
 	while (--i >= 0 && pos != 0)
-		if (count[0] < count[1])
-			s_rotate_rev(stk, 'a');
-		else
+		if (count[0] > count[1])
 			s_rotate(stk, 'a');
+		else
+			s_rotate_rev(stk, 'a');
 	s_push(stk, 'b');
 	return (0);
+}
+
+void 	print_stack(t_stk *stk)
+{
+	int i = -1;
+	ft_putendl("\na--------");
+	while (++i < stk->cnt_a)
+		ft_putendl(ft_itoa(stk->a[i]));
+	ft_putendl("--------a\n");
+
+	i = -1;
+	ft_putendl("\nb--------");
+	while (++i < stk->cnt_b)
+		ft_putendl(ft_itoa(stk->b[i]));
+	ft_putendl("--------b\n");
+
 }

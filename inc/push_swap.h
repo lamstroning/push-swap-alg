@@ -55,6 +55,8 @@ void				s_rotate(t_stk *stk, char c);
 void				s_rotate_rev(t_stk *stk, char c);
 void				push_down(int **stk, int max);
 
-void	push_all(t_stk *stk, char col);
+void				push_all(t_stk *stk, char col);
+
+void 	print_stack(t_stk *stk);
 
 #endif

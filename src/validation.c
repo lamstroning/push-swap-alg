@@ -78,7 +78,7 @@ void check_number(const char *str)
 {
 	char	*tmp;
 
-	tmp = ft_itoa(ft_atoi(str));
+	tmp = ft_itoa(ft_latoi(str));
 	if (!tmp || ft_strcmp(tmp, str))
 		error("I'ts not are number!");
 	ft_strdel(&tmp);
@@ -90,40 +90,11 @@ void	cmp_args(const char *cmp, const char **args)
 
 	i = -1;
 	if (!args || !cmp)
-		return;
+		return ;
 	while (args[++i])
 		if (!ft_strcmp(args[i], cmp))
 			error("repeat numbers!");
 }
-
-//void	check_repeat(t_stk *stk)
-//{
-//	int		len;
-//	int		*repeat;
-//	int		*p_repeat;
-//	int		stack_size;
-//
-//	len = stk->cnt_a;
-//	while (--len >= 0)
-//	{
-//		stk->max = stk->max < stk->a[len] ? stk->a[len] : stk->max;
-//		stk->min = stk->min > stk->a[len] ? stk->a[len] : stk->min;
-//	}
-//	stack_size = stk->max < 0 ? stk->max * -1 : stk->max;
-//	if (stk->min < 0)
-//		stack_size += stk->min * -1;
-//	repeat = (int*)ft_memalloc(sizeof(int) * stack_size);
-//	repeat = ft_memset(repeat, 0, stk->max);
-//	p_repeat = stk->min < 0 ? repeat + stk->min * -1 : repeat;
-//	len = stk->cnt_a;
-//	while (--len >= 0)
-//	{
-//		p_repeat[stk->a[len]]++;
-//		if (p_repeat[stk->a[len]] == 2)
-//			error("repeat numbers!");
-//	}
-//	free(repeat);
-//}
 
 void error(char *msg)
 {
