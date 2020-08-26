@@ -9,12 +9,23 @@ t_stk	*create_stack(int stk_size, int *a)
 	stk->b = (int*)ft_memalloc(sizeof(int) * stk_size);
 	stk->max = stk->a[0];
 	stk->min = stk->a[0];
+	search_range(stk, a, stk_size);
 	stk->cnt_a = stk_size;
-	stk->dist = 5;
 	stk->cnt_b = 0;
-	stk->flags[0] = 0;
-	stk->flags[1] = 0;
+	ft_bzero(stk->flags, 2);
 	return (stk);
+}
+
+void	search_range(t_stk *stk, int *a, int len)
+{
+	stk->min = 0;
+	stk->max = 0;
+	while (a++ && --len)
+		if (*a > stk->max)
+			stk->max = *a;
+		else if (*a < stk->min)
+			stk->min = *a;
+	stk->m = stk->min + (stk->max - stk->min) / 2;
 }
 
 char	**merge_stack(char ****merge, int size)
@@ -48,7 +59,7 @@ char	**merge_stack(char ****merge, int size)
 
 int		main(int argc, const char **argv)
 {
-	t_stk	*stack;
+	t_stk	*stk;
 	int		size;
 	char	**args_stk;
 	int		*a;
@@ -58,7 +69,7 @@ int		main(int argc, const char **argv)
 	check_repeat(&argv[1]);
 	args_stk = parse_string(&argv[1], argc - 1, &size);
 	size = check_validate(args_stk, size, &a);
-	stack = create_stack(size, a);
-	search_median(stack);
+	stk = create_stack(size, a);
+	sort_median(stk);
 	return (1);
 }
